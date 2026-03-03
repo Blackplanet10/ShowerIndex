@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shower Window Radar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>מתי הכי טוב להתקלח?</h1>
+      <p class="sub">מדד הסתברותי לפי היסטוריית אזעקות. לא התחייבות לבטיחות.</p>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <label for="area">בחר אזור:</label>
+        <select id="area"></select>
+      </div>
+
+      <div class="grid">
+        <div class="metric">
+          <div class="label">סיכון עכשיו</div>
+          <div id="riskScore" class="value">--</div>
+          <div id="riskBadge" class="badge">טוען...</div>
+        </div>
+
+        <div class="metric">
+          <div class="label">הסתברות לשקט ל־12 דקות</div>
+          <div id="pQuiet" class="value">--</div>
+          <div class="hint" id="pQuietHint"></div>
+        </div>
+
+        <div class="metric">
+          <div class="label">מאז האזעקה האחרונה</div>
+          <div id="sinceLast" class="value">--</div>
+          <div class="hint" id="lastTs"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <button id="refresh">רענן נתונים</button>
+        <span class="small" id="updatedAt"></span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>הערה חשובה</h2>
+      <ul>
+        <li>זה כלי הסתברותי בלבד שמתבסס על העבר.</li>
+        <li>בכל מצב, נשמעים להנחיות פיקוד העורף ולצופרים בזמן אמת.</li>
+        <li>אם אין לך מרחב מוגן קרוב וזמן התרעה קצר, אל תסתמך על המדד.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
